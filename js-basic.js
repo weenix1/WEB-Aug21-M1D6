@@ -112,7 +112,10 @@ console.log(deleteOne());
 */
 function onlyLetters(string) {
   string = "i have 4 dogs";
+  let nonLetters = string.replace(4, "");
+  return nonLetters;
 }
+console.log(onlyLetters());
 
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
