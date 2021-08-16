@@ -120,6 +120,24 @@ console.log(onlyLetters());
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+function isThisAnEmail(email) {
+  let charbeforAt = email.substr(0, email.indexOf("@"));
+  if (!(charbeforAt.length > 127)) {
+    if (charbeforAt.length >= 2) {
+      let char =
+        /^(([^<>()[\]{}'^?\\.,!|//#%*-+=&;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      //var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      return char.test(email);
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+console.log(isThisAnEmail("gallacerggheurebht"));
+
+//console.log(isThisAnEmail("gallacero@gmail.com"));
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
