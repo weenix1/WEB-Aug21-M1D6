@@ -142,6 +142,21 @@ console.log(isThisAnEmail("gallacerggheurebht"));
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+function whatDayIsIt() {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let date = new Date();
+  let dayName = days[date.getDay()];
+  return dayName;
+}
+console.log(whatDayIsIt());
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
